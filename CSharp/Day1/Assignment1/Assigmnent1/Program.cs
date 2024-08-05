@@ -12,8 +12,8 @@
             Console.Write("Enter num2: ");
             float.TryParse(Console.ReadLine(), out n2);
 
-            float sum = GetSum(n1, n2);
-            float avg = GetAvg(n1, n2);
+            float sum = GetSum<float>(n1, n2);
+            float avg = GetAvg<float>(n1, n2);
 
             Console.WriteLine($"\nSum({n1}, {n2}) = {sum}");
             Console.WriteLine($"Average({n1}, {n2}) = {avg}");
@@ -24,14 +24,14 @@
         // Get sum , average for 2 numbers
         //      □ Watch ,breakpoint debug
 
-        public static float GetSum(float n1 , float n2 )
+        public static Tvalue GetSum<Tvalue>(Tvalue n1 , Tvalue n2 )
         {
-            return n1 + n2;
+            return (dynamic)n1 + (dynamic)n2;
         }
 
-        public static float GetAvg(float n1, float n2) 
+        public static Tvalue GetAvg<Tvalue>(Tvalue n1, Tvalue n2) 
         { 
-            return (n1 + n2) / 2;
+            return ((dynamic)n1 + (dynamic)n2) / 2;
         }
 
        
