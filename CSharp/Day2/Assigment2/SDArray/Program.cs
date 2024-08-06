@@ -1,4 +1,6 @@
 ﻿using SimpleCalc;
+using System.ComponentModel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SDArray
 {
@@ -6,6 +8,10 @@ namespace SDArray
     {
         static void Main(string[] args)
         {
+            // Get sum, average ,max ,min of integers given by the user
+            //      □ Let the user determine number of integers
+            
+            
             //short size;
             //Console.Write("Enter Size of Array: ");
             //short.TryParse(Console.ReadLine(), out size);
@@ -18,6 +24,13 @@ namespace SDArray
             //Console.WriteLine($"Avg= {GetAvg(array)}");
             //Console.WriteLine($"Max= {GetMax(array)}");
             //Console.WriteLine($"Min= {GetMin(array)}");
+
+
+            // Calculate the result of one operation Equation
+            //      □ Ex: user Input 5 * 3  result 15
+            //      □ Method used(string)
+            //          ■ Contains
+            //          ■ Split
 
             CalculateOperation();
 

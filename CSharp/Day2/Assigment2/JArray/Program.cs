@@ -1,11 +1,20 @@
-﻿namespace JArray
+﻿using SimpleCalc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace JArray
 {
     internal class Program
     {
+         //⊡ Design a program that get from user input
+        //      □ Number of class room
+        //      □ Number of student in each class
+        //      □ Mark for each student
+        //⊡ Then calculate the 
+        //      □ Average mark for each class room
         static void Main(string[] args)
         {
-            short numberOfClassRoom = (short)SimpleCalc.Program.ReadNumber("Enter number of class room: ");
-            short[][] classes = new short[numberOfClassRoom][];
+            short numberOfClassRooms = (short)SimpleCalc.Program.ReadNumber("Enter number of class room: ");
+            short[][] classes = new short[numberOfClassRooms][];
 
             DeclareStudentsToEachClass(classes);
 
@@ -44,9 +53,10 @@
 
         public static void Avg(short[][] jClasses)
         {
+            short sum;
             for (int i = 0; i < jClasses.GetLength(0); ++i)
             {
-                short sum = 0;
+                sum = 0;
                 for (int j = 0; j < jClasses[i].Length; ++j)
                     sum += jClasses[i][j];
 

@@ -4,6 +4,9 @@ namespace MSArray
 {
     internal class Program
     {
+        // ⊡ Design a program to Get the degree of 3 student with 4 subject from user input then calculate 
+        //      □ The sum of marks for each student 
+        //      □ The average for each subject
         static void Main(string[] args)
         {
             short[,] studentDegrees = new short[3, 4];
