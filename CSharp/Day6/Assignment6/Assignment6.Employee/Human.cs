@@ -1,6 +1,6 @@
 ﻿namespace Assignment6.clsEmployee
 {
-    public class Human
+    abstract public class Human
     {
         public string Name { get; set; }
         public short Age { get; set; }
