@@ -1,4 +1,5 @@
 ﻿using Assignment6.clsEmployee;
+using System.Collections.Immutable;
 
 namespace Assignment6.MenuApp
 {
@@ -36,7 +37,7 @@ namespace Assignment6.MenuApp
 
         public static void GenerateMenu()
         {
-            string[] menu = { "  New  ", "Display", "  Exit " };
+            string[] menu = { "  New  ", " Display ", "  Sort  ", "  Exit  " };
             short colShift = (short)(Console.WindowWidth / 2);
             short rowShift = (short)(Console.WindowHeight / (menu.Length + 1));
 
@@ -62,16 +63,16 @@ namespace Assignment6.MenuApp
             switch (keyInfo.Key)
             {
                 case ConsoleKey.UpArrow:
-                    highlight = highlight == 0 ? highlight = 2 : --highlight;
+                    highlight = highlight == 0 ? highlight = 3 : --highlight;
                     break;
                 case ConsoleKey.DownArrow:
-                    highlight = (highlight == 2 ? highlight = 0 : ++highlight);
+                    highlight = (highlight == 3 ? highlight = 0 : ++highlight);
                     break;
                 case ConsoleKey.Home:
                     highlight = 0;
                     break;
                 case ConsoleKey.End:
-                    highlight = 2;
+                    highlight = 3;
                     break;
                 case ConsoleKey.Enter:
                     Console.Clear();
@@ -86,6 +87,12 @@ namespace Assignment6.MenuApp
                             Console.ReadKey();
                             break;
                         case 2:
+                            //Array.Sort(emps);
+                            Array.Sort(emps, new Comparer.CompareByName());
+                            emps.Print();
+                            Console.ReadKey();
+                            break;
+                        case 3:
                             loop = false;
                             break;
                     }

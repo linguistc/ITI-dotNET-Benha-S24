@@ -1,6 +1,6 @@
 ﻿namespace Assignment6.GeoShape
 {
-    public class GeoShape
+    abstract public class GeoShape
     {
         protected float dim1;
         protected float dim2;
@@ -21,7 +21,7 @@
             this.dim1 = this.dim2 = dim;
         }
 
-        public virtual double Area() => 0d;
+        public abstract double Area();
         
     }
 }
