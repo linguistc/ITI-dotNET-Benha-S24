@@ -20,5 +20,12 @@
             this.gender = gender;
         }
 
+        public virtual void DisplayData()
+        {
+            Console.WriteLine($"Employee name: {this.Name}");
+            Console.WriteLine($"Employee ID: {this.Age}");
+            Console.WriteLine($"Employee gender: {this.gender.ToString()}");
+        }
+
     }
 }
