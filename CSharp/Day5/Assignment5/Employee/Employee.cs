@@ -28,7 +28,7 @@ namespace clsEmployee
         {
             Console.WriteLine($"Employee ID: {this.ID}");
             base.DisplayData();
-            Console.WriteLine($"Employee salary: {this.Salary}");
+            Console.WriteLine($"Salary: {this.Salary}");
             
         }
     }

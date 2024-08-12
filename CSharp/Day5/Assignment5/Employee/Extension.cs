@@ -14,11 +14,7 @@
                 if (emp == null) return;
 
                 Console.WriteLine($"Employee[{i + 1}] data:");
-                Console.WriteLine($"Employee ID: {emp.ID}");
-                Console.WriteLine($"Employee name: {emp.Name}");
-                Console.WriteLine($"Employee ID: {emp.Age}");
-                Console.WriteLine($"Employee salary: {emp.Salary}");
-                Console.WriteLine($"Employee gender: {emp.gender.ToString()}");
+                emp.DisplayData();
                 Console.WriteLine("\n\n");
             }
 

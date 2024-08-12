@@ -22,9 +22,9 @@
 
         public virtual void DisplayData()
         {
-            Console.WriteLine($"Employee name: {this.Name}");
-            Console.WriteLine($"Employee ID: {this.Age}");
-            Console.WriteLine($"Employee gender: {this.gender.ToString()}");
+            Console.WriteLine($"Name: {this.Name}");
+            Console.WriteLine($"Age: {this.Age}");
+            Console.WriteLine($"Gender: {this.gender.ToString()}");
         }
 
     }
