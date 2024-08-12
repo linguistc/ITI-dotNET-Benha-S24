@@ -21,7 +21,10 @@
             foreach (GeoShape shape in shapes)
                 sum += shape.Area();
 
-            Console.WriteLine(sum);
+            Console.WriteLine($"Sum= {sum}");
+
+            Picture p = new Picture(shapes);
+            Console.WriteLine($"Picture area= {p.Area()}");
 
         }
     }
