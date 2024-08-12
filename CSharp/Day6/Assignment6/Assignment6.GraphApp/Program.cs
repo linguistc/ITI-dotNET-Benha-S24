@@ -7,6 +7,8 @@ namespace Assignment6.GraphApp
 
         static void Main(string[] args)
         {
+            DrawingClass.StartDraw(600, 800);
+
             Circle c = new Circle(70, 70, 100, System.Drawing.Color.Red);
             Line l = new Line(70, 70, 240, 240, System.Drawing.Color.Magenta);
             Rect r = new Rect(10, 10, 150, 100, Color.GreenYellow);
