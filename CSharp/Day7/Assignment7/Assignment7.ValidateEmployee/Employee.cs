@@ -1,4 +1,7 @@
-﻿namespace Assignment7.ValidateEmployee
+﻿using System.Collections;
+using System.ComponentModel.Design;
+
+namespace Assignment7.ValidateEmployee
 {
     public enum enGender { male, female }
     public class Employee : Human, IComparable
@@ -41,6 +44,18 @@
             return 1;
 
            // return this.Salary.CompareTo(e.Salary);
+        }
+
+        public static Employee Search(short ID, ArrayList emps)
+        {
+            foreach (Employee e in emps)
+            {
+                if (e.ID == ID)
+                    return e;
+            }
+            return null;
+                   
+            
         }
     }
 }
