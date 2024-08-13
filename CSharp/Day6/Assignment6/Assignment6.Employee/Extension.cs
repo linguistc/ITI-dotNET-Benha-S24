@@ -19,7 +19,7 @@ namespace Assignment6.clsEmployee
             {
                 if (emp == null) return;
 
-                Console.WriteLine($"Employee[{i + 1}] data:");
+                Console.WriteLine($"Employee[{++i}] data:");
                 Console.WriteLine(emp);
                 Console.WriteLine("\n\n");
             }

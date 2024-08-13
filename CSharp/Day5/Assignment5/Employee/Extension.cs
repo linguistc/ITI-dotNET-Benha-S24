@@ -13,7 +13,7 @@
             {
                 if (emp == null) return;
 
-                Console.WriteLine($"Employee[{i + 1}] data:");
+                Console.WriteLine($"Employee[{++i}] data:");
                 emp.DisplayData();
                 Console.WriteLine("\n\n");
             }

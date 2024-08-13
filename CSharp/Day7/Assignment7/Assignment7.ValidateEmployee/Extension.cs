@@ -16,7 +16,7 @@ namespace Assignment7.ValidateEmployee
             {
                 if (emp == null) return;
 
-                Console.WriteLine($"Employee[{i + 1}] data:");
+                Console.WriteLine($"Employee[{++i}] data:");
                 Console.WriteLine(emp);
                 Console.WriteLine("\n\n");
             }
@@ -33,7 +33,7 @@ namespace Assignment7.ValidateEmployee
             {
                 if (emp == null) return;
 
-                Console.WriteLine($"Employee[{i + 1}] data:");
+                Console.WriteLine($"Employee[{++i}] data:");
                 Console.WriteLine(emp);
                 Console.WriteLine("\n\n");
             }
