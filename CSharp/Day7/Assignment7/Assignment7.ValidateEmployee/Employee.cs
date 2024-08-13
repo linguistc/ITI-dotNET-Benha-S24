@@ -46,16 +46,24 @@ namespace Assignment7.ValidateEmployee
            // return this.Salary.CompareTo(e.Salary);
         }
 
-        public static Employee Search(short ID, ArrayList emps)
+        public static Employee SearchByID(short ID, ArrayList emps)
         {
             foreach (Employee e in emps)
             {
                 if (e.ID == ID)
                     return e;
             }
+            return null; 
+        }
+
+        public static Employee SearchByName(string name, ArrayList emps)
+        {
+            foreach (Employee e in emps)
+            {
+                if (e.Name == name)
+                    return e;
+            }
             return null;
-                   
-            
         }
     }
 }

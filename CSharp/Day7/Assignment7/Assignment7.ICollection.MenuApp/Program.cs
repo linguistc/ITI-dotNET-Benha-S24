@@ -1,5 +1,6 @@
 ﻿using Assignment7.ValidateEmployee;
 using System.Collections;
+using System.Xml.Linq;
 namespace Assignment7.ICollection.MenuApp
 {
     internal class Program
@@ -81,7 +82,7 @@ namespace Assignment7.ICollection.MenuApp
 
         public static void GenerateMenu()
         {
-            string[] menu = { "   New   ", " Display ", " Search ", "  Sort  ", "  Exit  " };
+            string[] menu = { "   New   ", " Display ", " SearchByID ", "  Sort  ", "  Exit  " };
             short colShift = (short)(Console.WindowWidth / 2);
             short rowShift = (short)(Console.WindowHeight / (menu.Length + 1));
 
@@ -131,7 +132,9 @@ namespace Assignment7.ICollection.MenuApp
                             Console.ReadKey();
                             break;
                         case 2:
-                            SearchEmp(emps);
+                            SearchEmpByID(emps);
+                            Console.ReadKey();
+                            SearchEmpByName(emps);
                             Console.ReadKey();
                             break;
                         case 3:
@@ -150,7 +153,7 @@ namespace Assignment7.ICollection.MenuApp
             }
         }
 
-        public static void SearchEmp(ArrayList emps)
+        public static void SearchEmpByID(ArrayList emps)
         {
             Console.Write("Enter ID: ");
             short id = 0;
@@ -165,13 +168,40 @@ namespace Assignment7.ICollection.MenuApp
                     loop = false;
             }
 
-            var e = Employee.Search(id, emps);
+            var e = Employee.SearchByID(id, emps);
 
             if (e != null)
                 Console.WriteLine(e);
             else
                 Console.WriteLine("Not Found");
-;
+
+            Console.WriteLine("\n\n");
+        }
+
+        public static void SearchEmpByName(ArrayList emps)
+        {
+            string name = "";
+            bool loop = true;
+            Console.Write($"Enter Name: ");
+            while (loop)
+            {
+
+                name = Console.ReadLine();
+
+                if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name))
+                    Console.Write("Enter a valid name: ");
+                else
+                    loop = false;
+            }
+            
+            var e = Employee.SearchByName(name, emps);
+
+            if (e != null)
+                Console.WriteLine(e);
+            else
+                Console.WriteLine("Not Found");
+
+            Console.WriteLine("\n\n");
         }
 
         private static void SetMenuTheme(string[] menu, short colShift, short rowShift, ref short highlight)
