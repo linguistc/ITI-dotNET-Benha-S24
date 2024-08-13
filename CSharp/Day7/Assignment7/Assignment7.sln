@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment7.ValidateEmployee", "Assignment7.ValidateEmployee\Assignment7.ValidateEmployee.csproj", "{98C51BF5-7825-4C87-A86D-97FD0B8C049A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment7.ValidateEmployee.MenuApp", "Assignment7.ValidateEmployee.MenuApp\Assignment7.ValidateEmployee.MenuApp.csproj", "{5E88AAD9-7E97-4A4C-9BF0-E44EFEE76CC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C51BF5-7825-4C87-A86D-97FD0B8C049A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C51BF5-7825-4C87-A86D-97FD0B8C049A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C51BF5-7825-4C87-A86D-97FD0B8C049A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C51BF5-7825-4C87-A86D-97FD0B8C049A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E88AAD9-7E97-4A4C-9BF0-E44EFEE76CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E88AAD9-7E97-4A4C-9BF0-E44EFEE76CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E88AAD9-7E97-4A4C-9BF0-E44EFEE76CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E88AAD9-7E97-4A4C-9BF0-E44EFEE76CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {418DE6CA-6950-4549-8D2B-7B997835135C}
+	EndGlobalSection
+EndGlobal
